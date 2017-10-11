@@ -1,1 +1,26 @@
 
+body{
+	background-color:blue;
+	color:white;
+	font-family:terminal,courier,chicago;
+	height:1024px;
+	}
+	#MainTxtWindow{
+		font-size:72px;
+		height:70%;
+		border:3px solid white;
+		padding:44px;
+		margins:24px;
+	}
+	#ButtonWindow{
+		border:3px solid white;
+		text-align:center;
+		height:20%;
+		padding:44px;
+		margins:24px;
+	}
+	button{
+		font-size:50px;
+		height:100px;
+		width:200px;
+	}
