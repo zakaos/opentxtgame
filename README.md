@@ -1,0 +1,3 @@
+# opentxtgame
+open source text game engine
+ibthoughtbi dod tjis already...
