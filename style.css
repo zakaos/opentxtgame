@@ -11,16 +11,16 @@ body{
 		border:3px solid white;
 		padding:44px;
 		margins:24px;
+		overflow:auto;
 	}
 	#ButtonWindow{
+	overflow:auto;
 		border:3px solid white;
 		text-align:center;
 		height:40%;
-		padding:44px;
-		margins:24px;
+		padding:48px;
 	}
 	button{
 		font-size:50px;
-		height:300px;
-		width:300px;
-	}
+		padding:48px;
+		}
