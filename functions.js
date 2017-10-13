@@ -1,5 +1,6 @@
 function makeRoom(room){
-document.getElementById('MainTxt').innerHTML=room.description;
+
+document.getElementById('MainTxt').innerHTML=room.title+"<br>"+room.description;
 footTxt("");
 document.getElementById('btn1').innerText=room.btn1txt;
 document.getElementById('btn2').innerText=room.btn2txt;
@@ -17,8 +18,8 @@ document.getElementById('btn5').onclick=room.btn5fnc;
 document.getElementById('btn6').onclick=room.btn6fnc;
 document.getElementById('btn7').onclick=room.btn7fnc;
 document.getElementById('btn8').onclick=room.btn8fnc;
-
 }
+
 function footTxt(newfoottxt){
 	document.getElementById('FooterTxt').innerHTML=newfoottxt;
 }
