@@ -1,26 +1,32 @@
+* {
+	box-sizing: border-box;
+}
 
 body{
 	background-color:blue;
 	color:white;
 	font-family:terminal,courier,chicago;
-	height:1024px;
-	}
-	#MainTxtWindow{
-		font-size:64px;
-		height:800px;
-		border:3px solid white;
-		padding:44px;
-		margins:24px;
-		overflow:auto;
-	}
-	#ButtonWindow{
+}
+
+#MainTxtWindow{
+	font-size:32px;
+	height:70vh;
+	/* vh stands for viewport height as a percentage -> 70vh = 70% of the screen height*/
+	border:3px solid white;
+	padding:10px 44px;
 	overflow:auto;
-		border:3px solid white;
-		text-align:center;
-		height:400px;
-		padding:48px;
-	}
-	button{
-		font-size:48px;
-		padding:48px;
-		}
+}
+
+#ButtonWindow{
+	overflow:auto;
+	border:3px solid white;
+	text-align:center;
+	height:23vh;
+	padding:20px;
+}
+
+button{
+	height: 50px;
+	font-size:16px;
+	margin:10px;
+}
