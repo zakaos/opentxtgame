@@ -7,20 +7,20 @@ body{
 	}
 	#MainTxtWindow{
 		font-size:72px;
-		height:70%;
+		height:60%;
 		border:3px solid white;
 		padding:44px;
 		margins:24px;
+		overflow:auto;
 	}
 	#ButtonWindow{
+	overflow:auto;
 		border:3px solid white;
 		text-align:center;
-		height:20%;
-		padding:44px;
-		margins:24px;
+		height:40%;
+		padding:48px;
 	}
 	button{
 		font-size:50px;
-		height:100px;
-		width:200px;
-	}
+		padding:48px;
+		}
