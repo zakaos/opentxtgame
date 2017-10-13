@@ -5,7 +5,7 @@ open source text game engine
 To create a simple easy to edit text game engine in js for practice in collaboration through github
 
 # Features:
-1 Main Text window and a Button window containing 8 buttons that are used to interact with each "room"
+1 Main Text window containing a room title, a descriptive paragraph, and a line of footer text that provides feedback. A Button window containing 8 buttons that are used to interact with each "room"
 
 # Structure:
 Each room is an object made up of a room title, room description, 8 button labels, and 8 button functions seen as below:
