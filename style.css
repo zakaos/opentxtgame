@@ -7,7 +7,7 @@ body{
 	}
 	#MainTxtWindow{
 		font-size:72px;
-		height:70%;
+		height:60%;
 		border:3px solid white;
 		padding:44px;
 		margins:24px;
@@ -15,12 +15,12 @@ body{
 	#ButtonWindow{
 		border:3px solid white;
 		text-align:center;
-		height:20%;
+		height:40%;
 		padding:44px;
 		margins:24px;
 	}
 	button{
 		font-size:50px;
-		height:100px;
-		width:200px;
+		height:300px;
+		width:300px;
 	}
