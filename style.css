@@ -6,8 +6,8 @@ body{
 	height:1024px;
 	}
 	#MainTxtWindow{
-		font-size:72px;
-		height:60%;
+		font-size:64px;
+		height:800px;
 		border:3px solid white;
 		padding:44px;
 		margins:24px;
@@ -17,10 +17,10 @@ body{
 	overflow:auto;
 		border:3px solid white;
 		text-align:center;
-		height:40%;
+		height:400px;
 		padding:48px;
 	}
 	button{
-		font-size:50px;
+		font-size:48px;
 		padding:48px;
 		}
