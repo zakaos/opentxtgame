@@ -3,6 +3,7 @@ open source text game engine
 
 # Playable here:
 https://htmlpreview.github.io/?https://github.com/zakaos/opentxtgame/blob/master/index.html
+<br>
 (really big for some reason right now?)
 
 # Objective:
