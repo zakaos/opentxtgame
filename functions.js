@@ -1,6 +1,6 @@
 function makeRoom(room){
 
-document.getElementById('MainTxt').innerHTML=room.title+"<br>"+room.description;
+document.getElementById('MainTxt').innerHTML="<b>"+room.title+"</b>"+"<br>"+room.description;
 footTxt("");
 document.getElementById('btn1').innerText=room.btn1txt;
 document.getElementById('btn2').innerText=room.btn2txt;
@@ -21,7 +21,7 @@ document.getElementById('btn8').onclick=room.btn8fnc;
 }
 
 function footTxt(newfoottxt){
-	document.getElementById('FooterTxt').innerHTML=newfoottxt;
+	document.getElementById('FooterTxt').innerHTML="<i>"+newfoottxt+"</i>";
 }
 OutFront=new Object();
 OutFront.title="Out in Front of the House"
