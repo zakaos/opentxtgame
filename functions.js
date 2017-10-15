@@ -38,11 +38,25 @@ var LivingRoom= {
 	title: "The Living Room",
 	description: "You are in the main living room of the house, there are normal living room things here, a tv, a couch and chair. A door leads to the bedroom, and another door leads out to the front yard. a dining room stretches out across the hallway.",
 	btnTxt: ["watch tv", "look out the window", "take a nap", "look around", "sneeze", "go out the front door", 
-		"go into the bedroom", "enter the dining room"],
+		"go into the bedroom", "enter the dining room", "You lose"],
 	btnFnc: ['footTxt(\'You spend some minutes clicking through channels, as usual nothings on.\')', 'footTxt(\'You look out the window, seems like its raining outside.\')', 
 		'footTxt(\'You snooze off for a bit, no cool dreams or anthing though.\')', 'footTxt(\'Looks like this room could use some cleaning, I am not gonna be the one to do it though.\')', 
 		'footTxt(\'Achoooooo!\')', 'makeRoom(OutFront)', 'makeRoom(BedRoom)', 
-		'makeRoom(DiningRoom)']
+		'makeRoom(DiningRoom)', 'makeRoom(DefeatRoom)']
 };
+
+var VictoryRoom = {
+	title: "You have won the game",
+	description: "This is the winners room",
+	btnTxt: ["Finish the Game"],
+	btnFnc: ['']
+}
+
+var DefeatRoom = {
+	title: "You have lost the game",
+	description: "This is the losers room",
+	btnTxt: ["Finish the Game"],
+	btnFnc: ['']
+}
 
 makeRoom(OutFront);
