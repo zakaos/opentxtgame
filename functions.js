@@ -46,3 +46,49 @@ var LivingRoom= {
 };
 
 makeRoom(OutFront);
+
+/* 
+simple inventory class
+might need improvement for more features
+*/
+
+var inv = new function() {
+    this.stuff = [];
+    
+    //pass s as string for adding to array
+    this.add = function(s) {
+        return this.stuff.push(s);
+    };
+    
+    //pass i as array index for removing stuff from array
+	this.remove = function(i) {
+        if (i < this.stuff.length) {
+            this.stuff.splice(i,1);	
+        }
+	};
+	
+	//pass i as array index to get
+	this.get = function(i) {
+        if (i < this.stuff.length) {
+            return this.stuff[i];
+        } else {
+            return ""; //may need to raise error code for checking
+        }
+    };
+    
+    this.getAll = function () {
+        return this.stuff;
+    };
+    
+    this.count = function() {
+        return this.stuff.length;
+    };
+};
+
+/* This for testing */
+// inv.add("aa"); inv.add("bb"); inv.add("cc"); inv.add("dd");
+// console.log(inv.count());
+// console.log(inv.get(2));
+// console.log(inv.getAll());
+// inv.remove(3);
+// console.log(inv.getAll());
