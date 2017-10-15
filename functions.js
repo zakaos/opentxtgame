@@ -1,6 +1,5 @@
 function makeRoom(room){
 	var btnPos = document.getElementById('ButtonWindow');
-
 	document.getElementById('MainTxt').innerHTML="<b>"+room.title+"</b>"+"<br>"+room.description;
 	footTxt("");
 
@@ -21,7 +20,21 @@ function makeRoom(room){
 	function footTxt(newfoottxt){
 		document.getElementById('FooterTxt').innerHTML="<i>"+newfoottxt.toString()+"</i>";
 }
-
+var Closet= {
+	title: "You are in a closet...",
+	description: "Well, this is a closet. not unlike every other closet you have seen.Pretty dark in here.",
+	btnTxt: ["go back to the living room"],
+	btnFnc: ['makeRoom(BedRoom)']
+};
+var BedRoom= {
+	title: "What a messy bedroom",
+	description: "Woah this place is a mess! Clothes are scattered everywhere, there are dishes towards the edges of the clothes heap. Following a plug from the wall you see a laptop computer. A somewhat openable closet is in the corner. ",
+	btnTxt: ["turn on the computer", "enter the closet", "look around", "go back to the living room", 
+		"clean up the room"],
+	btnFnc: ['footTxt(\'Turning on the computer, it looks as if someone is making a silly text game.\')', 'makeRoom(Closet)', 
+		'footTxt(\'This place would make a normal person shiver.\')', 'makeRoom(LivingRoom)', 
+		'footTxt(\'HA HA Yea Right!\')']
+};
 var OutFront= {
 	title: "Out in Front of the House",
 	description: "Ahh, good old outside. Seems to be raining a little bit. The grass is soaking wet, it looks like it has been raining for a long time. The front yard A big apple tree is fenced in the center of the yard. For some reason the front gate is locked preventing you from going anywhere else but back inside the house.",
@@ -59,7 +72,7 @@ var DefeatRoom = {
 	btnFnc: ['']
 }
 
-makeRoom(OutFront);
+makeRoom(LivingRoom);
 
 /* 
 simple inventory class
