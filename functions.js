@@ -1,8 +1,10 @@
 function makeRoom(room){
-	var btnPos = document.getElementById('ButtonWindow');
+var btnPos = document.getElementById('ButtonWindow');
+//draw room description
 	document.getElementById('MainTxt').innerHTML="<b>"+room.title+"</b>"+"<br>"+room.description;
 	footTxt("");
-
+	
+//button stuff
 	if(document.getElementById('GameButton')) {
 		var container = document.getElementById("ButtonWindow");
 		while (container.lastChild) {
@@ -15,11 +17,35 @@ function makeRoom(room){
 		btnPos.insertAdjacentHTML('beforeend', '<button id="GameButton" onClick="' + room.btnFnc[i] + '">' + room.btnTxt[i]  
 			+ '</button>');
 	}
+	//spawn items
+for (i=0;i<Items.length;i++)
+{
+	if (room=[i].startingRoom){document.getElementById('MainTxt').innerHTML+="<b>"+[i].description};
+}
 	}
 
+//draw footer text
 	function footTxt(newfoottxt){
 		document.getElementById('FooterTxt').innerHTML="<i>"+newfoottxt.toString()+"</i>";
 }
+
+
+//Items
+Items=new Array();
+Items=[
+widget={
+	title:"widget",
+	description:"a widget is sitting here for no reason.",
+	startingRoom:"Closet"
+},
+guitar={
+	title:"guitar",
+	description:"an old guitar sits here collecting dust",
+	startingRoom:"BedRoom"
+}
+];
+
+// Rooms
 
 // Title scene
 var Title= {
@@ -125,9 +151,9 @@ var inv = new function() {
 };
 
 /* This for testing */
-// inv.add("aa"); inv.add("bb"); inv.add("cc"); inv.add("dd");
+//inv.add("aa"); inv.add("bb"); inv.add("cc"); inv.add("dd");
 // console.log(inv.count());
 // console.log(inv.get(2));
-// console.log(inv.getAll());
+//console.log(inv.getAll());
 // inv.remove(3);
 // console.log(inv.getAll());
