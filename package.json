@@ -18,7 +18,8 @@
   "homepage": "https://github.com/zakaos/opentxtgame#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-webserver": "^0.9.1"
+    "gulp-webserver": "^0.9.1",
+    "morgan": "^1.9.0"
   },
   "dependencies": {}
 }
