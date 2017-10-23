@@ -18,10 +18,11 @@ var btnPos = document.getElementById('ButtonWindow');
 			+ '</button>');
 	}
 	//spawn items
-for (i=0;i<Items.length;i++)
-{
-	if (room=[i].startingRoom){document.getElementById('MainTxt').innerHTML+="<b>"+[i].description};
-}
+	for (i=0;i<Items.length;i++)
+	{
+		if (room.name == Items[i].location) {
+			document.getElementById('MainTxt').innerHTML+="<b>"+Items[i].description+"</b>"};
+		}
 	}
 
 //draw footer text
@@ -31,24 +32,30 @@ for (i=0;i<Items.length;i++)
 
 
 //Items
-Items=new Array();
+var Items=new Array();
 Items=[
-widget={
-	title:"widget",
-	description:"a widget is sitting here for no reason.",
-	startingRoom:"Closet"
-},
-guitar={
-	title:"guitar",
-	description:"an old guitar sits here collecting dust",
-	startingRoom:"BedRoom"
-}
+	{
+		title:"widget",
+		description:"a widget is sitting here for no reason.",
+		location:"Closet"
+	},
+	{
+		title:"guitar",
+		description:"an old guitar sits here collecting dust",
+		location:"BedRoom"
+	},
+	{
+		title:"flashlight",
+		description:"there is a flashlight in my inventory",
+		location:"Inventory"
+	}
 ];
 
 // Rooms
 
 // Title scene
 var Title= {
+	name: "Title",
 	title: "Text Adventures Are Fun",
 	description: "This is one of the best text adventures you will ever witness. Journey to the button \
 		and select if you dare to take such a marvelous journey!",
@@ -57,6 +64,7 @@ var Title= {
 };
 // from BedRoom; to BedRoom
 var Closet= {
+	name: "Closet",
 	title: "You are in a closet...",
 	description: "Well, this is a closet. not unlike every other closet you have seen.Pretty dark in here.",
 	btnTxt: ["go back to the living room"],
@@ -64,6 +72,7 @@ var Closet= {
 };
 // from LivingRoom; to Closet, LivingRoom
 var BedRoom= {
+	name: "BedRoom",
 	title: "What a messy bedroom",
 	description: "Woah this place is a mess! Clothes are scattered everywhere, there are dishes towards the edges of the clothes heap. Following a plug from the wall you see a laptop computer. A somewhat openable closet is in the corner. ",
 	btnTxt: ["turn on the computer", "enter the closet", "look around", "go back to the living room", 
@@ -74,6 +83,7 @@ var BedRoom= {
 };
 // from LivingRoom; to LivingRoom
 var OutFront= {
+	name: "OutFront",
 	title: "Out in Front of the House",
 	description: "Ahh, good old outside. Seems to be raining a little bit. The grass is soaking wet, it looks like it has been raining for a long time. The front yard A big apple tree is fenced in the center of the yard. For some reason the front gate is locked preventing you from going anywhere else but back inside the house.",
 	btnTxt: ["go back inside", "grab an apple", "take a nap", "look around", "climb the tree",
@@ -86,6 +96,7 @@ var OutFront= {
 };
 // from Title; to Bedroom, OutFront, DiningRoom, EndRoom
 var LivingRoom= {
+	name: "LivingRoom",
 	title: "The Living Room",
 	description: "You are in the main living room of the house, there are normal living room things here, a tv, a couch and chair. A door leads to the bedroom, and another door leads out to the front yard. a dining room stretches out across the hallway.",
 	btnTxt: ["watch tv", "look out the window", "take a nap", "look around", "sneeze", "go out the front door", 
@@ -97,6 +108,7 @@ var LivingRoom= {
 };
 // winners room
 var VictoryRoom= {
+	name: "VictoryRoom",
 	title: "You have won the game",
 	description: "This is the winners room",
 	btnTxt: ["Finish the Game"],
@@ -104,6 +116,7 @@ var VictoryRoom= {
 };
 // losers room
 var DefeatRoom= {
+	name: "DefeatRoom",
 	title: "You have lost the game",
 	description: "This is the losers room",
 	btnTxt: ["Finish the Game"],
