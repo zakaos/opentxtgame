@@ -21,7 +21,7 @@ var btnPos = document.getElementById('ButtonWindow');
 	for (i=0;i<Items.length;i++)
 	{
 		if (room.name == Items[i].location) {
-			document.getElementById('MainTxt').innerHTML+="<b>"+Items[i].description+"</b>"};
+			document.getElementById('MainTxt').innerHTML+="<br><b>"+Items[i].description+"</b>"};
 		}
 	}
 
