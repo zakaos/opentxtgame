@@ -10,7 +10,7 @@ body{
 
 #MainTxtWindow{
 	font-size:32px;
-	height:70vh;
+	height:60vh;
 	/* vh stands for viewport height as a percentage -> 70vh = 70% of the screen height*/
 	border:3px solid white;
 	padding:10px 44px;
@@ -21,9 +21,12 @@ body{
 	overflow:auto;
 	border:3px solid white;
 	text-align:center;
-	height:23vh;
+	height:20vh;
 	padding:20px;
 }
+#FooterTxt{
+  padding-bottom:8px;
+  }
 
 button{
  background-color:blue;
