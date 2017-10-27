@@ -17,19 +17,28 @@ var btnPos = document.getElementById('ButtonWindow');
 		btnPos.insertAdjacentHTML('beforeend', '<button id="GameButton" onClick="' + room.btnFnc[i] + '">' + room.btnTxt[i]  
 			+ '</button>');
 	}
+	
 	//spawn items
 	for (i=0;i<Items.length;i++)
 	{
-		if (room.name == Items[i].location) {
-			document.getElementById('MainTxt').innerHTML+="<br><b>"+Items[i].description+"</b>"};
+		if (room.name === Items[i].location) {
+			document.getElementById('MainTxt').innerHTML+="<br><b id='ItemDesc"+i+"'>"+Items[i].description+"</b>";
+			btnPos.insertAdjacentHTML('beforeend', '<button id="PickButton'+i+'" onClick="pickItem(' + i + ')">pick ' + Items[i].title + '</button>');
 		}
 	}
 
-//draw footer text
+	//draw footer text
 	function footTxt(newfoottxt){
 		document.getElementById('FooterTxt').innerHTML="<i>"+newfoottxt.toString()+"</i>";
+	}
 }
 
+//Pass i as item index for finding item from Items array 
+function pickItem(i) {
+	Items[i].location = "Inventory";
+	document.getElementById('PickButton'+i).remove();
+	document.getElementById('ItemDesc'+i).remove();
+}
 
 //Items
 var Items=new Array();
@@ -128,40 +137,42 @@ makeRoom(Title);
 /* 
 simple inventory class
 might need improvement for more features
+
+Prepare to delete in near future, we dont need this because implementation change.
 */
 
-var inv = new function() {
-    this.stuff = [];
+// var inv = new function() {
+//     this.stuff = [];
     
-    //pass s as string for adding to array
-    this.add = function(s) {
-        return this.stuff.push(s);
-    };
+//     //pass s as string for adding to array
+//     this.add = function(s) {
+//         return this.stuff.push(s);
+//     };
     
-    //pass i as array index for removing stuff from array
-	this.remove = function(i) {
-        if (i < this.stuff.length) {
-            this.stuff.splice(i,1);	
-        }
-	};
+//     //pass i as array index for removing stuff from array
+// 	this.remove = function(i) {
+//         if (i < this.stuff.length) {
+//             this.stuff.splice(i,1);	
+//         }
+// 	};
 	
-	//pass i as array index to get
-	this.get = function(i) {
-        if (i < this.stuff.length) {
-            return this.stuff[i];
-        } else {
-            return ""; //may need to raise error code for checking
-        }
-    };
+// 	//pass i as array index to get
+// 	this.get = function(i) {
+//         if (i < this.stuff.length) {
+//             return this.stuff[i];
+//         } else {
+//             return ""; //may need to raise error code for checking
+//         }
+//     };
     
-    this.getAll = function () {
-        return this.stuff;
-    };
+//     this.getAll = function () {
+//         return this.stuff;
+//     };
     
-    this.count = function() {
-        return this.stuff.length;
-    };
-};
+//     this.count = function() {
+//         return this.stuff.length;
+//     };
+// };
 
 /* This for testing */
 //inv.add("aa"); inv.add("bb"); inv.add("cc"); inv.add("dd");
