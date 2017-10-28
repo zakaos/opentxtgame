@@ -26,11 +26,11 @@ var btnPos = document.getElementById('ButtonWindow');
 			btnPos.insertAdjacentHTML('beforeend', '<button id="PickButton'+i+'" onClick="pickItem(' + i + ')">pick ' + Items[i].title + '</button>');
 		}
 	}
+}
 
-	//draw footer text
-	function footTxt(newfoottxt){
-		document.getElementById('FooterTxt').innerHTML="<i>"+newfoottxt.toString()+"</i>";
-	}
+//draw footer text
+function footTxt(newfoottxt){
+	document.getElementById('FooterTxt').innerHTML="<i>"+newfoottxt.toString()+"</i>";
 }
 
 //Pass i as item index for finding item from Items array 
